@@ -2,7 +2,7 @@ package object Derivation {
 
   // Ecuación de 5 puntos
   def derivada(f: Double => Double): Double => Double = {
-    ???
+    //Esto es solo para probar que si se envia
   }
 
   // (f + g)' = f' + g'
