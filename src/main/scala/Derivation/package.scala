@@ -7,7 +7,7 @@ package object Derivacion {
       //val c=
       //if (x=c or y=c)
 
-      val
+      val fx =f(x)
 
       val h=0.1
       (x0:Double)=> (f(x0 - 2*h)-8*f(x0 - h)+8*f(x0 + h)-f(x0 + 2*h))/(12*h)
