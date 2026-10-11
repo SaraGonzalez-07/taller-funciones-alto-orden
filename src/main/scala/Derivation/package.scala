@@ -1,4 +1,4 @@
-package object Derivation {
+package object Derivacion {
 
   // Ecuación de 5 puntos
   def derivada(f: Double => Double): Double => Double = {
@@ -8,7 +8,9 @@ package object Derivation {
 
   // (f + g)' = f' + g'
   def derivadaSuma(f: Double => Double, g: Double => Double): Double => Double = {
-    ???
+    val f'= Double
+    val g'= Double
+    (f + g:Double) => f' + g'
   }
 
   // (f - g)' = f' - g'
@@ -18,7 +20,9 @@ package object Derivation {
 
   // (f * g)' = f' * g + f * g'
   def derivadaMult(f: Double => Double, g: Double => Double): Double => Double = {
-    ???
+    val f'= Double
+    val g'= Double
+    (f * g:Double)=> f' * g + f * g'
   }
 
   // (f / g)' = (f' * g - f * g') / g^2
