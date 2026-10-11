@@ -2,15 +2,22 @@ package object Derivacion {
 
   // Ecuación de 5 puntos
   def derivada(f: Double => Double): Double => Double = {
-    val h=0.1
-    (x0:Double)=> (f(x0 - 2*h)-8*f(x0 - h)+8*f(x0 + h)-f(x0 + 2*h))/(12*h)
+    //Definir parametros
+    def deviVarianbles (x:Duoble, h:Double): Double{
+      //val c=
+      //if (x=c or y=c)
+
+      val
+
+      val h=0.1
+      (x0:Double)=> (f(x0 - 2*h)-8*f(x0 - h)+8*f(x0 + h)-f(x0 + 2*h))/(12*h)
+    }
+
   }
 
   // (f + g)' = f' + g'
   def derivadaSuma(f: Double => Double, g: Double => Double): Double => Double = {
-    val f'= Double
-    val g'= Double
-    (f + g:Double) => f' + g'
+
   }
 
   // (f - g)' = f' - g'
@@ -20,9 +27,7 @@ package object Derivacion {
 
   // (f * g)' = f' * g + f * g'
   def derivadaMult(f: Double => Double, g: Double => Double): Double => Double = {
-    val f'= Double
-    val g'= Double
-    (f * g:Double)=> f' * g + f * g'
+
   }
 
   // (f / g)' = (f' * g - f * g') / g^2
