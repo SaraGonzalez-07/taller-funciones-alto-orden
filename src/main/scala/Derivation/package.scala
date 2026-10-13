@@ -4,20 +4,7 @@ package object Derivacion {
   def derivada(f: Double => Double): Double => Double = {
     //Definir parametros
     def deviVarianbles (x:Duoble, h:Double): Double {
-      //val c=
-      //if (x=c or y=c)
-
-      val fx = f (x)
-
       val h=0.1
-    //Dividimos en dos derivadas
-      val dev1= (f(x0)-f(x0 - h))/h
-      val dev2= (f(x0 + h)-f(x0))/h
-      val dev1Abs = math.abs(dev1)
-      val dev2Abs = math.abs(dev2)
-      val dif= (dev1Abs - dev2Abs)
-      val tolerancia= 0.001
-
 
       (x0:Double)=> (f(x0 - 2*h)-8*f(x0 - h)+8*f(x0 + h)-f(x0 + 2*h))/(12*h)
     }
