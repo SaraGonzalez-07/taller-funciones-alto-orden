@@ -6,6 +6,7 @@ val f   = (x: Double) => x * x
 val g   = (x: Double) => x * x * x
 val h   = (x: Double) => f(x) / g(x)
 val j   = (x: Double) => g(x) / f(x)
+f
 
 // Pruebas de derivadaDiv
 val h1 = derivadaDiv((x: Double) => x * x, (x: Double) => x + 1)

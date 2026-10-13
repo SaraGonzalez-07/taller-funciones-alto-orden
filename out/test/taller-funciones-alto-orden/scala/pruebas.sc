@@ -6,14 +6,15 @@ val f   = (x: Double) => x * x
 val g   = (x: Double) => x * x * x
 val h   = (x: Double) => f(x) / g(x)
 val j   = (x: Double) => g(x) / f(x)
+f
 
 // Pruebas de derivadaDiv
 val h1 = derivadaDiv((x: Double) => x * x, (x: Double) => x + 1)
 val h2 = derivadaDiv(f, g)
 val h3 = derivadaDiv(g, f)
-val h4 = derivadaDiv(g, f)  // Este es igual a h3, ¿querías otra cosa?
+val h4 = derivadaDiv(g, f)
 
-h1(2)
+h1(1)
 h2(2)
 h3(2)
 h4(2)
