@@ -5,12 +5,14 @@ package object Derivacion {
     //Definir parametros
       val h=0.1
 
-      (x0:Double)=> (f(x0 - 2*h)-8*f(x0 - h)+8*f(x0 + h)-f(x0 + 2*h))/(12*h)
-
+      (x0:Double)=> {
+        (f(x0 - 2 * h) - 8 * f(x0 - h) + 8 * f(x0 + h) - f(x0 + 2 * h)) / (12 * h)
+      }
   }
 
   // (f + g)' = f' + g'
   def derivadaSuma(f: Double => Double, g: Double => Double): Double => Double = {
+    (x:Double) => derivada(f) (x) + derivada(g) (x)
 
   }
 
@@ -21,6 +23,7 @@ package object Derivacion {
 
   // (f * g)' = f' * g + f * g'
   def derivadaMult(f: Double => Double, g: Double => Double): Double => Double = {
+    (x:Double) => (derivada(f) (x) * g(x))+ (f(x) * derivada(g) (x))
 
   }
 
