@@ -38,6 +38,6 @@ derivadaResta(ident, cte)(4)
 derivadaDiv(cuad, masUno)(4)
 derivadaDiv(cubo, cos)(2)
 derivadaDiv(cte, sexta)(1)
-derivadaDiv(raiz, ident)(0)
+derivadaDiv(cuad, ident)(0)
 derivadaDiv(cte, ident)(0)
 
