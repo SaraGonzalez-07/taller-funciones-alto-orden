@@ -2,22 +2,42 @@ import Derivacion._
 
 // Funciones base
 val cte = (x: Double) => 2.0
-val f   = (x: Double) => x * x
-val g   = (x: Double) => x * x * x
-val h   = (x: Double) => f(x) / g(x)
-val j   = (x: Double) => g(x) / f(x)
+val ident = (x: Double) => x
+val cuad = (x: Double) => x * x
+val cubo = (x: Double) => x * x * x
+val cuarta = (x: Double) => x * x * x * x
+val quinta = (x: Double) => x * x * x * x * x
+val sexta = (x: Double) => math.pow(x, 6)
+val masUno = (x: Double) => x + 1
+val sen = (x: Double) => math.sin(x)
+val cos = (x: Double) => math.cos(x)
+val raiz = (x: Double) => math.sqrt(x)
 
-// Pruebas de derivadaDiv
-val h1 = derivadaDiv((x: Double) => x * x, (x: Double) => x + 1)
-val h2 = derivadaDiv(f, g)
-val h3 = derivadaDiv(g, f)
-val h4 = derivadaDiv(g, f)
-
-h1(1)
-h2(2)
-h3(2)
-h4(2)
-
-// Pruebas de derivada
+// derivada
+derivada(cuad)(3)
+derivada(cubo)(-1)
+derivada(cuarta)(2)
+derivada(sen)(0)
+derivada(quinta)(2)
+derivada(sexta)(1)
+derivada(raiz)(4)
 derivada(cte)(5)
-derivada(cte)(6)
+
+// derivadaSuma
+
+// derivadaResta
+derivadaResta(cubo, cuad)(2)
+derivadaResta(cuarta, cubo)(1)
+derivadaResta(cuad, cuad)(7)
+derivadaResta(sen, cos)(1)
+derivadaResta(ident, cte)(4)
+
+// derivadaMult
+
+// derivadaDiv
+derivadaDiv(cuad, masUno)(4)
+derivadaDiv(cubo, cos)(2)
+derivadaDiv(cte, sexta)(1)
+derivadaDiv(raiz, ident)(0)
+derivadaDiv(cte, ident)(0)
+

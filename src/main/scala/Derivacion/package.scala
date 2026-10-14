@@ -1,5 +1,12 @@
 package object Derivacion {
-
+  /** Taller 2: Funciones de Alto Orden
+   *
+   * @author Margareth Sophya Gamboa Izquierdo
+   * 2518629-3743
+   * @author Sara Michelle González Posso
+   * 2519548-3743
+   *
+   */
   // Ecuación de 5 puntos
   def derivada(f: Double => Double): Double => Double = {
     //Definir parametros
