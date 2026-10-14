@@ -24,6 +24,11 @@ derivada(raiz)(4)
 derivada(cte)(5)
 
 // derivadaSuma
+derivadaSuma(cuad, quinta)(4)
+derivadaSuma(ident, cubo)(6)
+derivadaSuma(masUno, cte)(-5)
+derivadaSuma(cos, sen)(1)
+derivadaSuma(raiz, raiz)(8)
 
 // derivadaResta
 derivadaResta(cubo, cuad)(2)
@@ -33,6 +38,11 @@ derivadaResta(sen, cos)(1)
 derivadaResta(ident, cte)(4)
 
 // derivadaMult
+derivadaMult(sexta, quinta)(7)
+derivadaMult(cubo, cte)(4)
+derivadaMult(cte, cte)(8)
+derivadaMult(ident, quinta)(-2)
+derivadaMult(sen, raiz)(2)
 
 // derivadaDiv
 derivadaDiv(cuad, masUno)(4)

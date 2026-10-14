@@ -24,6 +24,11 @@ derivada(raiz)(4)
 derivada(cte)(5)
 
 // derivadaSuma
+derivadaSuma(cuad, quinta)(4)
+derivadaSuma(ident, cubo)(6)
+derivadaSuma(masUno, cte)(-5)
+derivadaSuma(cos, sen)(1)
+derivadaSuma(raiz, raiz)(8)
 
 // derivadaResta
 derivadaResta(cubo, cuad)(2)
@@ -33,11 +38,29 @@ derivadaResta(sen, cos)(1)
 derivadaResta(ident, cte)(4)
 
 // derivadaMult
+derivadaMult(sexta, quinta)(7)
+derivadaMult(cubo, cte)(4)
+derivadaMult(cte, cte)(8)
+derivadaMult(ident, quinta)(-2)
+derivadaMult(sen, raiz)(2)
 
 // derivadaDiv
 derivadaDiv(cuad, masUno)(4)
 derivadaDiv(cubo, cos)(2)
 derivadaDiv(cte, sexta)(1)
-derivadaDiv(raiz, ident)(0)
+derivadaDiv(cuad, ident)(0)
 derivadaDiv(cte, ident)(0)
 
+
+// Casos generados con ayuda de IA
+val expo = (x: Double) => math.exp(x)
+val ln   = (x: Double) => math.log(x)
+val osc  = (x: Double) => math.sin(30 * x)
+
+derivada(expo)(0)                 // 1
+derivada(ln)(1)                   // 1
+derivada(ln)(0.1)                 // NaN
+derivada(osc)(0)                  // 30
+derivadaSuma(expo, ln)(1)         // e + 1 ≈ 3.71828
+derivadaMult(cuad, cubo)(-3)      // 405
+derivadaDiv(cte, sen)(0.001)      // ≈ -1999999.67
